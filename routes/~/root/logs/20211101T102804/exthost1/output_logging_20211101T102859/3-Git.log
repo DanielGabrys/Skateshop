@@ -1,0 +1,157 @@
+Looking for git in: git
+Using git 2.30.0 from git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/daniel
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+git.getSCMResource.uri file:///var/www/html/projekt/resources/views/main.blade.php
+repo root /home/daniel
+> git show :Pobrane/szablony html/lookcare/index-2.html
+> git ls-files --stage -- /home/daniel/Pobrane/szablony html/lookcare/index-2.html
+> git remote add testgit https://github.com/DanielGabrys/Skateshop.git
+> git remote add Skateshop https://github.com/DanielGabrys/Skateshop.git

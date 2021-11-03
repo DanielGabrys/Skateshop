@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4F9AA656-84B8-3E0A-096E-DD16021936A9" name="products_categories">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:38:53 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="489D86FA-14D9-7CE4-3E32-172ED46C612A">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:39:12 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product_id" id="8D02486C-2765-1A10-2C36-54D60C5B6DB7">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:39:34 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="category_id" id="C15C6786-E0B8-BC5F-B6A9-1FEBF0BC8A53">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:39:51 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="product_id1" id="84B8868A-4AFC-CBF4-51AC-D6D94DA24A79">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:41:26 UTC</createdTime>
+<generatorID>79A3F4D9-BE6A-C834-26AD-AA44BE104382</generatorID>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<referedAttribute>6292FD2A-3D1F-382A-2768-BA4F1CC70EBF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="category_id1" id="A8700CF5-D6F9-D1E1-1123-8A90B539944B">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:42:28 UTC</createdTime>
+<generatorID>1EF093A6-9F6F-5D60-C766-E87DD2C94451</generatorID>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<referedAttribute>D1705CF8-E9D8-8CBB-8834-A23B232E7760</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E3903760-067A-2AD8-DE1D-9F7B632AF469" name="Key_1">
+<createdBy>root</createdBy>
+<createdTime>2021-07-20 21:40:16 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<engineerTo>
+<item key="020B8076-611D-FD80-61DF-75326161F4CC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>489D86FA-14D9-7CE4-3E32-172ED46C612A,79A3F4D9-BE6A-C834-26AD-AA44BE104382,1EF093A6-9F6F-5D60-C766-E87DD2C94451</newElementsIDs>
+<usedAttributes>
+<attributeRef>489D86FA-14D9-7CE4-3E32-172ED46C612A</attributeRef>
+<attributeRef>84B8868A-4AFC-CBF4-51AC-D6D94DA24A79</attributeRef>
+<attributeRef>A8700CF5-D6F9-D1E1-1123-8A90B539944B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

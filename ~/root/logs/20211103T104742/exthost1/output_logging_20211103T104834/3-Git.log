@@ -1,0 +1,83 @@
+Looking for git in: git
+Using git 2.30.0 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /var/www/html/projekt
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: gałąź „master” nie ma ustawionej gałęzi nadrzędnej
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git push
+fatal: Bieżąca gałąź master nie ma gałęzi nadrzędnej.
+Aby wypchnąć bieżącą gałąź i ustawić zdalne repozytorium jako nadrzędne, użyj
+
+    git push --set-upstream origin master
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git commit --quiet --allow-empty-message --file -
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: gałąź „master” nie ma ustawionej gałęzi nadrzędnej
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git config --get commit.template
+> git push
+fatal: Bieżąca gałąź master nie ma gałęzi nadrzędnej.
+Aby wypchnąć bieżącą gałąź i ustawić zdalne repozytorium jako nadrzędne, użyj
+
+    git push --set-upstream origin master
+> git remote add Skateshop https://github.com/DanielGabrys/Skateshop.git
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: gałąź „master” nie ma ustawionej gałęzi nadrzędnej
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git push -u Skateshop master
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+Missing or invalid credentials.
+Error: socket hang up
+    at connResetException (internal/errors.js:559:14)
+    at Socket.socketOnEnd (_http_client.js:433:23)
+    at Socket.emit (events.js:208:15)
+    at endReadableNT (_stream_readable.js:1168:12)
+    at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+  code: 'ECONNRESET'
+}
+Missing or invalid credentials.
+Error: socket hang up
+    at connResetException (internal/errors.js:559:14)
+    at Socket.socketOnEnd (_http_client.js:433:23)
+    at Socket.emit (events.js:208:15)
+    at endReadableNT (_stream_readable.js:1168:12)
+    at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+  code: 'ECONNRESET'
+}
+remote: No anonymous write access.
+fatal: Uwierzytelnienie nie powiodło się dla „https://github.com/DanielGabrys/Skateshop.git/”
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: gałąź „master” nie ma ustawionej gałęzi nadrzędnej
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
