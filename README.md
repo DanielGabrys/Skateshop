@@ -4,41 +4,38 @@
 
 E-commerce website build in LARAVEL (in progress)
 
-![ups](Zrzut ekranu z 2021-11-03 11-33-59.png)
 
 ## Main page
 
+![Zrzut ekranu z 2021-11-03 11-33-59](https://user-images.githubusercontent.com/72975612/140054888-c7f31e67-785b-4ff7-851d-4584ccb48d98.png)
 
 
-## Laravel Sponsors
+## Product details
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Zrzut ekranu z 2021-11-03 11-46-10](https://user-images.githubusercontent.com/72975612/140054970-22d2f8b5-8f59-4717-a5f4-6f1153438ce9.png)
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## Shoppind Cart
 
-## Contributing
+![Zrzut ekranu z 2021-11-03 12-03-01](https://user-images.githubusercontent.com/72975612/140055007-44311f98-d25f-47f2-a81f-dc4def60358c.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Admin panel products CRUD
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Zrzut ekranu z 2021-11-03 12-03-49](https://user-images.githubusercontent.com/72975612/140055101-d125fffa-dd92-425c-a368-3c0ce6814806.png)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Edit product
 
-## License
+![Zrzut ekranu z 2021-11-03 12-03-59](https://user-images.githubusercontent.com/72975612/140055140-b2cac014-b749-4e7f-9e17-b66501a082ed.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Edit main page images
+
+![Zrzut ekranu z 2021-11-03 12-04-20](https://user-images.githubusercontent.com/72975612/140055177-31f9dc07-f718-4b64-9322-9a71a844d367.png)
+
+
+## Edit categories
+
+![Zrzut ekranu z 2021-11-03 12-04-36](https://user-images.githubusercontent.com/72975612/140055220-dfbf71b2-322f-40df-bcfe-1e9654193194.png)
+
