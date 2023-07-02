@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,13 +21,14 @@ Route::get('/header', function () {
 }) ->name('header');
 
 //main page
-Route::get('/main',[   "uses" => "ProductsController@index",'as'=>'main']);
+Route::get('/',[ProductsController::class,'index'])->name('main');
+
 
 //add to cart from main page
-Route::get('main/addToCart/{id}',["uses" => 'ProductsController@addProductToCart','as'=>'AddToCart']);
+Route::get('main/addToCart/{id}',[ProductsController::class,'addProductToCart'])->name('AddToCart');
 
 //add to cart from product detail page
-Route::post('main/addToCartForm',["uses" => 'ProductsController@addProductToCartForm','as'=>'AddToCartForm']);
+Route::post('main/addToCartForm',[ProductsController::class,'addProductToCartForm'])->name('AddToCartForm');
 
 // show cart items
 Route::get('cart', ["uses" => "ProductsController@showCart",'as'=>'cartproducts']);

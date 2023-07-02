@@ -29,9 +29,9 @@ class AdminProductsController extends Controller
         )->get();
 
         //new products
-        
-        
-   
+
+
+
         //dump($products);
         return view('admin.displayProducts',['products'=>$products]);
         //return $products;

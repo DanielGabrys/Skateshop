@@ -14,7 +14,6 @@ class AddRateProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->tinyInteger('rate');
             $table->string('description',200);
             $table->string('image',300);
             $table->tinyInteger('status');
