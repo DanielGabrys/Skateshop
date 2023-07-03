@@ -119,9 +119,9 @@
                         @endif
 
                     </ul>
-                    <a href="{{route('cartproducts')}}" class="btn btn-white btn-sm">Koszyk</a> &nbsp; <a href="#" class="btn btn-color btn-sm">Zamów</a>
+                    <a href="" class="btn btn-white btn-sm">Koszyk</a> &nbsp; <a href="#" class="btn btn-color btn-sm">Zamów</a>
                 </div>
-                <a href="{{route('cartproducts')}}" class="btn btn-white btn-xs">
+                <a href="" class="btn btn-white btn-xs">
                     @if($cart)
                         <span class="badge badge-color">{{$cart->totalPrice.' zł'}}</span>
                     @else

@@ -48,7 +48,7 @@
 
 
 <!-- Shop Filter
-============================================= 
+=============================================
 <
 
 <section id="shop" class="shop-4 pt-0">
@@ -58,7 +58,7 @@
             ============================================= --
             <div class="col-xs-12 col-sm-12 col-md-12 shop-filter">
                 <ul class="list-inline">
-                    
+
                     <li>
                         <a href="#" data-filter=".filter-best">TRENDY </a>
                     </li>
@@ -84,18 +84,18 @@
                     @if($product->is_on_sale==1)
                     <div class="col-xs-12 col-sm-6 col-md-3 product-item filter-sale">
                     @elseif($product->is_new==1)
-                    <div class="col-xs-12 col-sm-6 col-md-3 product-item filter-featured"> 
+                    <div class="col-xs-12 col-sm-6 col-md-3 product-item filter-featured">
                     @else
-                    <div class="col-xs-12 col-sm-6 col-md-3 product-item"> 
+                    <div class="col-xs-12 col-sm-6 col-md-3 product-item">
                     @endif
 
 
                         <a href="{{route('ProductView',['id'=>$product->id])}}">
-                            
+
                             @foreach($product->products_images as $images )
                                 <div class="product-img">
                                     <img src="{{Storage::disk('local')->url('product_images/'.$images->image)}}"  width="270" height="343" alt="product">
-                                   
+
                                         @if($product->is_on_sale==1)
                                         <div class="product-sale">
                                             sale
@@ -109,17 +109,17 @@
                                         </div>
                                         @endif
 
-                                        
+
                                             <div class="product-cart">
-                                                <a class="btn btn-secondary btn-block" href="{{route('AddToCart',['id'=> $product-> id])}}">Do Koszyka</a>
+                                                <a class="btn btn-secondary btn-block" href="">Do Koszyka</a>
                                             </div>
-                                        
-                                
-                                </div> 
+
+
+                                </div>
                             @endforeach
                         </a>
-                        
-                        
+
+
 
                         <-- .product-img end --
                         <div class="product-bio">
@@ -137,7 +137,7 @@
                         </div>
                         -- .product-bio end --
                     </div>
-                    
+
 
                 @endif
 
@@ -174,11 +174,11 @@
                         <h3><span>NOWE ARTYKUŁY</span></h3>
                     </div>
 
-                
+
                     <!-- Owl carousel block starts -->
                     <!-- Change values of data-items, data-auto-play, data-pagination & data-single-item based on your needs -->
                     <div class="owl-carousel" data-items="4" data-auto-play="true" data-pagination="true" data-single-item="false">
-                       
+
                     @foreach($products_new as $product)
                     <!-- Carousel item -->
                         <div class="owl-content">
@@ -204,7 +204,7 @@
                                         <a href="{{route('ProductView',['id'=>$product->id])}}">{{$product->name}}</a>
                                     </h4>
                                     <p class="product-price">
-                                   
+
                                     {{$product->price}}</p>
                                 </div>
                                 <!-- .product-bio end -->
@@ -213,7 +213,7 @@
                             <!-- .product-item end -->
                         </div>
                          @endforeach
-                     
+
                     </div>
                     <!-- Owl carousel block ends -->
 
@@ -223,7 +223,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <a class="btn btn-secondary" href="#">zobacz więcej <i class="fa fa-plus ml-xs"></i></a>
                     </div>
-                    
+
                 </div>
 
 
@@ -245,10 +245,10 @@
                         <h3><span>PROMOCJE</span></h3>
                     </div>
 
-                
+
                     <div class="owl-carousel" data-items="4" data-auto-play="true" data-pagination="true" data-single-item="false">
                     @foreach($products_sale as $product)
-            
+
                         <div class="owl-content">
                             <!-- Product Item #8 -->
                             <div class=" product-item filter-best">
@@ -281,17 +281,17 @@
                             <!-- .product-item end -->
                         </div>
                          @endforeach
-                     
+
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <a class="btn btn-secondary" href="#">zobacz więcej <i class="fa fa-plus ml-xs"></i></a>
                         </div>
-                        
+
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -309,13 +309,13 @@
                         <h3><span>ALL</span></h3>
                     </div>
 
-                
+
                     <div class="owl-carousel" data-items="4" data-auto-play="true" data-pagination="true" data-single-item="false">
                     @foreach($products as $product)
-            
+
                         <div class="owl-content">
                             <!-- Product Item #8 -->
-                            
+
                             <div class=" product-item">
                                 <div class="product-img">
                                     @foreach($product->products_images as $images)
@@ -331,7 +331,7 @@
                                             <div class="product-new">
                                                 new
                                             </div>
-                                        @endif  
+                                        @endif
 
 
                                     <div class="product-hover">
@@ -352,7 +352,7 @@
                                     @elseif($product->is_new==1)
                                          {{$product->price}}
                                     @else
-                                    @endif    
+                                    @endif
                                 </div>
                                 <!-- .product-bio end -->
 
@@ -360,17 +360,17 @@
                             <!-- .product-item end -->
                         </div>
                          @endforeach
-                     
+
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <a class="btn btn-secondary" href="#">zobacz więcej <i class="fa fa-plus ml-xs"></i></a>
                         </div>
-                        
+
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>

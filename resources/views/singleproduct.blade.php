@@ -23,7 +23,7 @@
                                     @endif
                                     @if($product['is_new']==1)
                                         <span class="onsale">New!</span>
-                                    @endif      
+                                    @endif
                                     <ul class="slides">
 
                                         @foreach($product_images as $image)
@@ -61,14 +61,14 @@
                                         <ins><span class="amount">{{$product['price']}}</span></ins>
                                     @else
                                         <ins><span class="amount">{{$product['price']}}</span></ins>
-                                    
+
                                     @endif
                                     </p>
                                 </div>
 
                                 {!! $product['description'] !!}
 
-                                <form action="/main/addToCartForm" class="variations_form cart" method="post">
+                                <form action="" class="variations_form cart" method="post">
                                     @csrf
 
                                     <div class="quantity">

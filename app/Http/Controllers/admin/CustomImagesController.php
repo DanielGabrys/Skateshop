@@ -15,7 +15,7 @@ class CustomImagesController extends Controller
     public $max_images_amount=5;
     public $no_image='no image.png';
 
-    public function editMainImagesForm()
+    public function editSliders()
     {
         $custom_images = Custom_Images::all();
 
@@ -48,7 +48,7 @@ class CustomImagesController extends Controller
         $this->validate($request,$rules,$customMessages);
     }
 
-    public function editMainImages(Request $request)
+    public function storeSliders(Request $request)
     {
 
         $name='tlo';
@@ -108,11 +108,11 @@ class CustomImagesController extends Controller
         //dump($insertArrayImages);
 
 
-        return redirect()->route('adminDisplayProducts');
+        return redirect()->route('getProducts');
 
     }
 
-    public function deleteMainImage($id)
+    public function deleteSlider($id)
     {
 
         $name='tlo';
@@ -156,7 +156,7 @@ class CustomImagesController extends Controller
         }
 
         //dump($images_to_move);
-        return $this->editMainImagesForm();
+        return $this->editSliders();
     }
 
 

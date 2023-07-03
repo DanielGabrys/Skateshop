@@ -4,7 +4,7 @@
 
     <div class="table-responsive" >
 
-        <form action="/admin/submitCategories" method="post" enctype="multipart/form-data">
+        <form action="{{route('storeCategory')}}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">
@@ -43,30 +43,8 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
 
 
-                    <a href="{{route('adminAddCategoryField')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-plus fa-sm "></i> DODAJ ATRYBUT</a>
-
                 </div>
             </div>
-
-
-            @for($i=0;$i<$attributes;$i++)
-            <div class="form-group">
-                <label for="name"> {{'Atrybut '.($i+1)}}</label>
-
-                <div class="col-md-6">
-                    <input id="{{'attribute'.$i}}" type="text" class="form-control @error('attribute'.$i) is-invalid @enderror" name="{{'attribute'.$i}}"
-                           value="" required autocomplete="{{'attribute'.$i}}" autofocus>
-
-                    @error('attribute'.$i)
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
-
-                </div>
-            </div>
-            @endfor
 
             <button type="submit" name="submit" class="btn btn-primary"> ZAPISZ </button>
 

@@ -39,7 +39,7 @@ class AdminProductsController extends Controller
     }
 
 
-    public function editProductsForm($id)
+    public function editProduct($id)
     {
         $products = Product::all();
         $product =$products->find($id);
@@ -57,6 +57,7 @@ class AdminProductsController extends Controller
 
     public function overviewProduct($id)
     {
+        // todo overview in separate page
         $products = Product::all();
         $product =$products->find($id);
 
@@ -70,7 +71,7 @@ class AdminProductsController extends Controller
 
     }
 
-    public function updateProducts(Request $request, $id)
+    public function updateProduct(Request $request, $id)
     {
 
         $insertArrayImages=[];  //list of images to update
@@ -142,7 +143,7 @@ class AdminProductsController extends Controller
        DB::table('products_images')->insert($insertArrayImages);
         //dump($updateArrayImages);
 
-       return redirect()->route('adminDisplayProducts');
+       return redirect()->route('getProducts');
 
     }
 
@@ -255,7 +256,7 @@ class AdminProductsController extends Controller
         }
 
         DB::table('products_images')->insert($insertArrayImages);
-        return redirect()->route('adminDisplayProducts');
+        return redirect()->route('getProducts');
 
        // dump($insertArrayImages);
     }
@@ -306,6 +307,7 @@ class AdminProductsController extends Controller
 
     public function deleteProductImage(Request $request,$id)
     {
+
         $products_images = Product_Images::all();
         $image = $products_images->find($id);
         $product_id=0;
@@ -349,7 +351,7 @@ class AdminProductsController extends Controller
                 DB::table('products_images')->where('id',$img->id)->update(['image'=>$new_name,'primary'=>$level]);
                 Storage::move('public/product_images/'.$img->image, 'public/product_images/'.$product->name.($level-1));
             }
-            return $this->editProductsForm($product_id);
+            return $this->editProduct($product_id);
         }
 
         //dump($images_to_move);

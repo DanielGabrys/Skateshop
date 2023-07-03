@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\admin\AdminProductsController;
+use App\Http\Controllers\admin\CustomImagesController;
+use App\Http\Controllers\admin\AdminCategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,96 +19,101 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
-Route::get('/header', function () {
-    return view('layouts.header');
-}) ->name('header');
-
 //main page
 Route::get('/',[ProductsController::class,'index'])->name('main');
 
-
-//add to cart from main page
-Route::get('main/addToCart/{id}',[ProductsController::class,'addProductToCart'])->name('AddToCart');
-
-//add to cart from product detail page
-Route::post('main/addToCartForm',[ProductsController::class,'addProductToCartForm'])->name('AddToCartForm');
-
-// show cart items
-Route::get('cart', ["uses" => "ProductsController@showCart",'as'=>'cartproducts']);
-
-// update item from cart (increase/decrease)
-Route::post('cart/updateItemFromCart',["uses" => 'ProductsController@updateItemFromCart','as'=>'UpdateFromCart']);
-
-// delete item from cart
-Route::get('cart/deleteItemFromCart/{id}',["uses" => 'ProductsController@deleteItemFromCart','as'=>'DeleteFromCart']);
-
-
-
-
 //single product view
-Route::get('main/product_view/{id}',["uses" => 'ProductsController@single_product','as'=>'ProductView']);
 
-// login customer
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/product/{id}',["uses" => 'ProductsController@single_product','as'=>'ProductView']);
 
 
+Route::group(['prefix' => 'cart'], function()
+{
 
+    /*
+    // show cart items
+    Route::get('/', [CartController::class,'showCart']) -> name('cartProducts');
 
-//admin panel
-Route::get('/admin', function () {
-    return view('layouts.admin');
-}) ->name('admin');
+    //add to cart
+    Route::get('/add/{id}',[CartController::class,'store'])->name('AddToCart');
 
-//admin panel product list
-Route::get('admin/products', ["uses" => "admin\AdminProductsController@index",'as'=>'adminDisplayProducts']);
+    // update cart items
+    Route::post('/update',[CartController::class,'update']) ->name('UpdateFromCart');
 
+    // delete item from cart
+    Route::get('/delete/{id}',[ProductsController::class,'deleteItemFromCart'])->name("DeleteFromCart");
+    */
 
-//admin panel edit product
-Route::get('admin/editProduct/{id}',["uses" => "admin\AdminProductsController@editProductsForm",'as'=>'adminEditProducts']);
-
-//admin panel submit changes after editing product
-Route::post('admin/updateProducts/{id}', ["uses" => "admin\AdminProductsController@updateProducts",'as'=>'adminUpdateProducts']);
-
-
-// admin panel product overview
-Route::get('admin/overviewProduct/{id}',["uses" => "admin\AdminProductsController@overviewProduct",'as'=>'adminOverviewProducts']);
-
-
-//admin panel add new product
-Route::get('admin/addProducts', ["uses" => "admin\AdminProductsController@addProduct",'as'=>'adminAddProducts']);
-
-//admin panel submit added product
-Route::post('admin/addSubmitProducts', ["uses" => "admin\AdminProductsController@addSubmitProduct",'as'=>'adminAddSubmitProducts']);
-
-//admin panel delete product
-Route::get('admin/deleteProducts/{id}', ["uses" => "admin\AdminProductsController@deleteProduct",'as'=>'adminDeleteProducts']);
-
-//admin panel delete product image
-Route::get('admin/deleteProductImage/{id}',["uses" => "admin\AdminProductsController@deleteProductImage",'as'=>'adminDeleteProductImage']);
+});
 
 
 
-//admin panel edit main page images form
-Route::get('admin/editMainPageImages',["uses" => 'admin\CustomImagesController@editMainImagesForm','as'=>'adminEditMainImagesForm']);
 
-//admin panel edit main page images
-Route::post('admin/EditMainPageImages',["uses" => 'admin\CustomImagesController@editMainImages','as'=>'adminEditMainImages']);
-
-//admin panel delete main page images
-Route::get('admin/deleteMainImage/{id}',["uses" => 'admin\CustomImagesController@deleteMainImage','as'=>'adminDeleteMainImages']);
+Route::group(['prefix' => 'admin'], function()
+{
 
 
-//admin panel categories display
-Route::get('admin/categories', ["uses" => "admin\AdminCategoriesController@index",'as'=>'adminDisplayCategories']);
+    Route::get('/', function () {return view('layouts.admin');}) ->name('admin');
 
-//admin panel add categories
-Route::get('admin/addCategories', ["uses" => "admin\AdminCategoriesController@addCategoryForm",'as'=>'adminAddCategoryForm']);
 
-//admin panel add categories submit
-Route::post('admin/submitCategories', ["uses" => "admin\AdminCategoriesController@addCategory",'as'=>'adminAddCategory']);
+    Route::group(['prefix' => 'products'], function ()
+    {
+        //admin panel product list
+        Route::get('/', [AdminProductsController::class,'index']) ->name('getProducts');
 
-//admin panel add categories field
-Route::get('admin/addCategoriesField', ["uses" => "admin\AdminCategoriesController@addCategoryField",'as'=>'adminAddCategoryField']);
+        //admin panel add new product
+        Route::get('/add', [AdminProductsController::class, 'addProduct'])->name('addProduct');
+
+        //admin panel submit added product
+        Route::post('/add',[AdminProductsController::class, 'addSubmitProduct'])->name('storeProduct');
+
+
+        //admin panel edit product view
+        Route::get('/{id}',[AdminProductsController::class,'editProduct'])->name('editProduct');
+
+        //admin panel submit changes after editing product
+        Route::post('/{id}', [AdminProductsController::class,"updateProduct"])->name('updateProduct');
+
+
+        // admin panel product overview
+        Route::get('/{id}/overview',[AdminProductsController::class,'overviewProduct'])->name('overviewProduct');
+
+        //admin panel delete product
+        Route::get('/{id}/delete', [AdminProductsController::class, 'deleteProduct',])->name('deleteProduct');
+
+        //admin panel delete product image
+        Route::get('/{id}/deleteImage',[AdminProductsController::class, 'deleteProductImage'])->name('deleteProductImage');
+
+    });
+
+    Route::group(['prefix' => 'sliders'], function ()
+    {
+        //admin panel edit main page images form
+        Route::get('/',[CustomImagesController::class ,'editSliders'])->name('editSliders');
+
+        //admin panel edit main page images
+        Route::post('/',[CustomImagesController::class ,'storeSliders'])->name('storeSliders');
+
+        //admin panel delete main page images
+        Route::get('/{id}/delete',[CustomImagesController::class ,'deleteSlider'])->name('deleteSlider');
+    });
+
+    Route::group(['prefix' => 'categories'], function ()
+    {
+        //admin panel categories display
+        Route::get('/', [AdminCategoriesController::class,'index'])->name('getCategories');
+
+        //admin panel add categories
+        Route::get('/add', [AdminCategoriesController::class,'addCategory'])->name('addCategory');
+
+        //admin panel store category
+        Route::post('/add', [AdminCategoriesController::class,'storeCategory'])->name('storeCategory');
+
+        //admin delete category
+        Route::get('/{id}/delete',[AdminCategoriesController::class,'deleteCategory'])->name('deleteCategory');
+
+    });
+
+
+});
+

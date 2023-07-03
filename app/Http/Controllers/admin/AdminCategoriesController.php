@@ -30,7 +30,6 @@ class AdminCategoriesController extends Controller
 
     }
 
-
     public function getparent($cat)
     {
 
@@ -47,33 +46,25 @@ class AdminCategoriesController extends Controller
     }
 
 
-    public function index(Request $request)
+    public function index()
     {
         $categories = Categories::orderBy('path')->get();
 
         $this->separateCategories($categories);
         $this->getparent($categories);
-        $request->session()->forget('categories');
 
         return view('admin.displayCategories', ['categories' => $categories]);
     }
 
-    public function validate_category(Request $request,$counter)
+    public function validate_category(Request $request)
     {
-        $rules = [];
-        $customMessages = [];
 
-        for($i=0;$i<$counter;$i++)
-        {
-            $rules += ['attribute'.$i =>['required']];
-        }
-
-        $rules += [
-            'name' => ['required', 'max:50'],
+        $rules = [
+            'name' => ['required','min:2','max:50', 'string','unique:categories,category'],
             'parent' => ['required'],
         ];
 
-        $customMessages += [
+        $customMessages = [
             'required' => 'Pole jest wymagane',
             'name.max' => 'Nazwa nie powinna być dłuższa niż 50 znaków',
         ];
@@ -90,7 +81,7 @@ class AdminCategoriesController extends Controller
 
     }
 
-    public function addCategoryField(Request $request)
+    public function addCategory(Request $request)
     {
 
         $categories = Categories::orderBy('category')->get();
@@ -108,7 +99,7 @@ class AdminCategoriesController extends Controller
         return view('admin.addCategory',['attributes'=>$prevCategories+1,'categories' => $categories]);
     }
 
-    public function addCategory(Request $request)
+    public function storeCategory(Request $request)
     {
 
         $insertArrayAttribute=[];
@@ -125,20 +116,19 @@ class AdminCategoriesController extends Controller
             $parent_id=0;
             $new_path='/'.$name;
             $new_level=0;
-           
+
 
         }
         else
         {
             $parent_id= $parent_cat->id; //id parent category
             $parent_path=$parent_cat->path; //path parent category
-            $parent_attributes=Attributes::where('category_id',$parent_id)->get();
 
             $new_path=$parent_path.'/'.$name; //path for new category
             $new_level=$parent_cat->level +1;
         }
-       
-            $this->validate_category($request,$counter);
+
+            $this->validate_category($request);
 
             $insertArray = array
             (
@@ -150,34 +140,22 @@ class AdminCategoriesController extends Controller
 
             DB::beginTransaction();
 
-           // $ID= Categories::insertGetID($insertArray);
             $ID=DB::table('categories')->insertGetId($insertArray);
 
-            if($parent_id!=0)
-            {
-                //parent attributes
-                foreach($parent_attributes as $attribute)
-                {
-                    $insertArrayParentAttributes+=['category_id' => $ID, 'attribute' => $attribute->attribute];
-                }
-            }
 
-            //child attributes
-            for($i=0;$i<$counter;$i++)
-            {
-                $insertArrayAttribute[$i] = ['category_id' => $ID, 'attribute' => $request->input('attribute'.$i)];
-            }
-
-        
-            $ok=Attributes::insert($insertArrayAttribute);
-            $ok2=Attributes::insert($insertArrayParentAttributes);
-            if(!$ID || !$ok){DB::rollBack();}
-        
+            if(!$ID){DB::rollBack();}
 
              DB::commit();
 
         return $this->index($request);
 
+    }
+
+    public function deleteCategory($id)
+    {
+        Categories::findOrFail($id)->delete();
+
+        return $this->index();
     }
 
 }

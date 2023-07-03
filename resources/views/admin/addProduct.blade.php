@@ -4,7 +4,7 @@
 
     <div class="table-responsive" >
 
-        <form action="/admin/addSubmitProducts" method="post" enctype="multipart/form-data">
+        <form action="{{route('storeProduct')}}" method="post" enctype="multipart/form-data">
             @csrf
 
 

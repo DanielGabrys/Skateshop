@@ -59,12 +59,12 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
 
-            <a class="nav-link" href="{{route('adminDisplayProducts')}}">
+            <a class="nav-link" href="{{route('getProducts')}}">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Products</span>
             </a>
 
-            <a class="nav-link" href="{{route('adminDisplayCategories')}}">
+            <a class="nav-link" href="{{route('getCategories')}}">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Categories</span>
             </a>
@@ -82,7 +82,7 @@
                  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Customize:</h6>
-                    <a class="collapse-item" href="{{route('adminEditMainImagesForm')}}">Main Page Images</a>
+                    <a class="collapse-item" href="{{route('editSliders')}}">Main Page Images</a>
                     <a class="collapse-item" href="utilities-other.html">Other</a>
                 </div>
             </div>

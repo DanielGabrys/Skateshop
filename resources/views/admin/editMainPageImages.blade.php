@@ -4,7 +4,7 @@
 
     <div class="table-responsive" >
 
-        <form action="/admin/EditMainPageImages" method="post" enctype="multipart/form-data">
+        <form action="{{route('storeSliders')}}" method="post" enctype="multipart/form-data">
             @csrf
 
             zalecany rozmiar zdjęć 1920x1080
@@ -29,7 +29,7 @@
 
                             <td>
                                  <span class="position-absolute top-right bg-Secondary">
-                                     <a href ="{{route('adminDeleteMainImages',['id' =>$image['id']])}}"> <i class="fas fa-fw fa-trash-alt"></i> </a>
+                                     <a href ="{{route('deleteSlider',['id' =>$image['id']])}}"> <i class="fas fa-fw fa-trash-alt"></i> </a>
                                  </span>
                                 <img src="{{Storage::disk('local')->url('other_images/'.$image['image'])}}"
                                      width="600" height="250">

@@ -4,7 +4,7 @@
 
 <div class="table-responsive" >
 
-    <form action="/admin/updateProducts/{{$product->id}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('updateProduct',$product->id)}}" method="post" enctype="multipart/form-data">
         @csrf
 
 
@@ -16,9 +16,7 @@
                        value="{{$product->name}}" required autocomplete="name" autofocus>
 
                 @error('name')
-                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
 
             </div>
@@ -84,7 +82,7 @@
                 @foreach($product_images as $image)
 
                 <span class="position-absolute top-right bg-Secondary">
-                <a href ="{{route('adminDeleteProductImage',['id' =>$image['id']])}}"> <i class="fas fa-fw fa-trash-alt"></i> </a>
+                <a href ="{{route('deleteProductImage',['id' =>$image['id']])}}"> <i class="fas fa-fw fa-trash-alt"></i> </a>
                 </span>
 
                     <img src="{{Storage::disk('local')->url('product_images/'.$image['image'])}}"

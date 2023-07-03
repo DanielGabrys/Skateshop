@@ -33,20 +33,9 @@ class ProductsController extends Controller
         )->get();
 
 
-        $products_new = $products->where('is_new',1)->sortByDesc('created_at');    
+        $products_new = $products->where('is_new',1)->sortByDesc('created_at');
 
-        $products_sale = $products->where('is_on_sale',1)->sortByDesc('sale_valid_date');  
-
-        /*
-        $products_new = $products->sortByDesc('created_at');
-        
-        $products_sale = Discount::with([
-        'product.products_images']
-        )->get();
-
-        */
-
-        
+        $products_sale = $products->where('is_on_sale',1)->sortByDesc('sale_valid_date');
 
 
         $categories = Categories::orderBy('path')->get();
@@ -63,59 +52,6 @@ class ProductsController extends Controller
             'cart'=>$cart,
             'custom_images'=>$custom_images,
             ]);
-    }
-
-    public function addProductToCart(Request $request,$id)
-    {
-        $prevCart = $request->session()->get('cart');
-        $cart = new Cart($prevCart);
-
-        $products = Product::all();
-        $product =$products->find($id);
-
-        $image = Product_Images::where('product_id',$id)->where('primary',1)->pluck('image');
-
-
-        $cart->addItem($id,$product,$image[0],1);
-        $request->session()->put('cart', $cart);
-
-        //dump($cart);
-
-        return redirect()->route('main');
-
-    }
-
-    public function addProductToCartForm(Request $request)
-    {
-        $prevCart = $request->session()->get('cart');
-        $cart = new Cart($prevCart);
-
-        $id = $request->input('id');
-
-        $products = Product::all();
-        $product =$products->find($id);
-
-
-        if($product) {
-            $max = 'max:'.$product->amount;
-            $rules = ['quantity' => ['required', 'integer', 'min:1', $max],
-                'id' => ['required', 'integer']];
-            $customMessages = [];
-
-            $quantity = $request->input('quantity');
-
-            $this->validate($request, $rules, $customMessages);
-
-            $image = Product_Images::where('product_id', $id)->where('primary', 1)->pluck('image');
-            $cart->addItem($id, $product, $image[0], $quantity);
-
-            $request->session()->put('cart', $cart);
-            //dump($cart);
-
-        }
-
-        return redirect()->route('main');
-
     }
 
     public function showCart()
